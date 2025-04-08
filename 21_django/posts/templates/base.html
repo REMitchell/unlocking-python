@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Site for Users</title>
+        <style>
+            div.post {
+                border: 1px solid black;
+            }
+            div.post span {
+                display: block;
+            }
+            span.post-created-date {
+                font-size: 9px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            {% include "header.html" %}
+        </div>
+        <div class="content">
+        {% block content %} {% endblock %}
+        </div>
+        <div class="footer">
+        {% include "footer.html" %}
+        </div>
+    </body>
+</html>

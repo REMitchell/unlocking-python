@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+    {% block content %}
+        {% if user.first_name and user.last_name %}
+            <h2> {{user.first_name}} {{user.last_name}}
+        {% else %}
+                <h2>{{user.username}}</h2>
+        {% endif %}
+        {% for post in posts %}
+            {% include "post.html" %}
+        {% endfor %}
+{% endblock %}

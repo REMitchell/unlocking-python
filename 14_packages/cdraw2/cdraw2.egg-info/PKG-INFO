@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: cdraw2
+Version: 0.1
+Summary: Makes colorful shapes
+Author: Ryan Mitchell
+Author-email: ryan@ryanemitchell.com
+License-File: LICENSE
+Requires-Dist: tqdm<5.0.0,>=4.0.0

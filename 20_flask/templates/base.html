@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Site for Users</title>
+        <style>
+            div {
+                margin: 20px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            {% include "header.html" %}
+        </div>
+        <div class="content">
+        {% block content %} {% endblock %}
+        </div>
+        <div class="footer">
+        {% include "footer.html" %}
+        </div>
+    </body>
+</html>

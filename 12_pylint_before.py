@@ -23,7 +23,7 @@
 #
 ###########################################################
 
-from random import shuffle
+from random import shuffle 
 
 
 class Card:
@@ -34,6 +34,9 @@ class Card:
 
     def __str__(self):
         return f'{self.value}{self.suit}'
+    
+    def fromString(cardStr):
+        return Card(cardStr[:-1], cardStr[-1])
 
 class Deck:
     values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -46,11 +49,10 @@ class Deck:
                 self.cards.append(Card(value, suit))
         shuffle(self.cards)
 
-    def deal(self):
-        hand = Hand(self.cards[0:5])
-        self.cards = self.cards[5:]
+    def deal(self, num=5):
+        hand = Hand(self.cards[0:num])
+        self.cards = self.cards[num:]
         return hand
-
 
 
 class Hand:
@@ -60,18 +62,20 @@ class Hand:
         combo = ''.join(combo)
         straightCombos.append(combo)
     straightCombos.append('A2345')
-    
-    
+
     def __init__(self, cards):
         self.cards = cards
 
-        self.counts = self.get_counts()
+        self.counts = self.getCounts()
 
     def __str__(self):
         return ', '.join([str(card) for card in self.cards])
 
+    def fromString(handString):
+        handArr = handString.split(', ')
+        return Hand([Card.fromString(cardStr) for cardStr in handArr])
 
-    def get_counts(self):
+    def getCounts(self):
         counts = {}
         for card in self.cards:
             if card.index not in counts:
@@ -79,12 +83,12 @@ class Hand:
             counts[card.index] += 1
         return counts
 
-    def get_sorted_remaining_values(self, indexVal):
+    def getSortedRemainingValues(self, indexVal):
         remainingVals = [card.index for card in self.cards if card.index != indexVal]
         remainingVals.sort(reverse=True)
         return remainingVals
     
-    def get_sorted_values(self):
+    def getSortedValues(self):
         vals = [card.index for card in self.cards]
         vals.sort(reverse=True)
         return vals
@@ -92,24 +96,24 @@ class Hand:
     def pair(self):
         for indexVal, count in self.counts.items():
             if count == 2:
-                return [indexVal] * 2 + self.get_sorted_remaining_values(indexVal)
+                return [indexVal] * 2 + self.getSortedRemainingValues(indexVal)
         return False
 
-    def three_of_a_kind(self):
+    def threeOfAKind(self):
         for indexVal, count in self.counts.items():
             if count == 3:
-                return [indexVal] * 3 + self.get_sorted_remaining_values(indexVal)
+                return [indexVal] * 3 + self.getSortedRemainingValues(indexVal)
         return False
 
-    def four_of_a_kind(self):
+    def fourOfAKind(self):
         for indexVal, count in self.counts.items():
             if count == 4:
-                return [indexVal] * 4 + self.get_sorted_remaining_values(indexVal)
+                return [indexVal] * 4 + self.getSortedRemainingValues(indexVal)
         return False
 
-    def full_house(self):
-        if self.pair() and self.three_of_a_kind():
-            return self.three_of_a_kind()
+    def fullHouse(self):
+        if self.pair() and self.threeOfAKind():
+            return self.threeOfAKind()
         return False
 
     def flush(self):
@@ -117,32 +121,32 @@ class Hand:
         for card in self.cards:
             suits.add(card.suit)
         if len(suits) == 1:
-            return self.get_sorted_values()
+            return self.getSortedValues()
         return False
 
-    def card_value(self, card):
+    def cardValue(self, card):
         return Deck.values.index(card.value)
 
     def straight(self):
-        self.cards.sort(key=self.card_value, reverse=False)
+        self.cards.sort(key=self.cardValue, reverse=False)
         handVals = ''.join([card.value for card in self.cards])
         if handVals in self.straightCombos:
-            return self.get_sorted_values()
+            return self.getSortedValues()
         return False
 
-    def straight_flush(self):
+    def straightFlush(self):
         if self.straight() and self.flush():
-            return self.get_sorted_values()
+            return self.getSortedValues()
         return False
 
     def royalFlush(self):
-        self.cards.sort(key=self.card_value, reverse=False)
+        self.cards.sort(key=self.cardValue, reverse=False)
         handVals = ''.join([card.value for card in self.cards])
         if handVals == '10JQKA' and self.flush():
-            return self.get_sorted_values()
+            return self.getSortedValues()
         return False
 
-    def two_pair(self):
+    def twoPair(self):
         if sorted(self.counts.values()) == [1, 2, 2]:
             # should be two paired vals
             pairedVals = [val for val, count in self.counts.items() if count == 2]
@@ -153,24 +157,24 @@ class Hand:
     def getScore(self):
         if self.royalFlush():
             return [9] + self.royalFlush()
-        if self.straight_flush():
-            return [8] + self.straight_flush()
-        if self.four_of_a_kind():
-            return [7] + self.four_of_a_kind()
-        if self.full_house():
-            return [6] +  self.full_house()
+        if self.straightFlush():
+            return [8] + self.straightFlush()
+        if self.fourOfAKind():
+            return [7] + self.fourOfAKind()
+        if self.fullHouse():
+            return [6] +  self.fullHouse()
         if self.flush():
             return [5] + self.flush()
         if self.straight():
             return [4] + self.straight()
-        if self.three_of_a_kind():
-            return [3] + self.three_of_a_kind()
-        if self.two_pair():
-            return [2] + self.two_pair()
+        if self.threeOfAKind():
+            return [3] + self.threeOfAKind()
+        if self.twoPair():
+            return [2] + self.twoPair()
         if self.pair():
             return [1] + self.pair()
         
-        return [0] + self.get_sorted_values() 
+        return [0] + self.getSortedValues() 
         
 
 deck = Deck()
@@ -180,18 +184,14 @@ hand2 = deck.deal()
 
 
 def determineWinner(hand1, hand2):
-    print(hand1)
-    print(hand2)
     score1 = hand1.getScore()
     score2 = hand2.getScore()
-
     for i in range(6):
         if score1[i] > score2[i]:
-            print('HAND 1 WINS!')
-            return
+            return 'HAND 1 WINS!'
+
         if score1[i] < score2[i]:
-            print('HAND 2 WINS!')
-            return
+            return 'HAND 2 WINS!'
 
 determineWinner(hand1, hand2)
 

@@ -1,0 +1,75 @@
+Importing package
+Unknown tree species: Horse Chestnut
+Initialized forest with 4 trees
+Importing package
+Unknown tree species: Horse Chestnut
+Initialized forest with 4 trees
+2024-08-27 14:01:51,448 - lumberjack - DEBUG - Importing package
+2024-08-27 14:01:51,450 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+2024-08-27 14:01:51,450 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:06:19 - lumberjack - DEBUG - Importing package
+08/27/2024 14:06:19 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:06:19 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:21:14 - lumberjack - DEBUG - Importing package
+08/27/2024 14:21:14 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:21:14 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:21:14 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:21:14 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:21:14 - lumberjack.lumberjack - INFO - Cutting 5 of height 30
+08/27/2024 14:21:14 - lumberjack.lumberjack - INFO - Cut 0 trees
+08/27/2024 14:21:52 - lumberjack - DEBUG - Importing package
+08/27/2024 14:21:52 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:21:52 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:21:52 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:21:52 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:21:52 - lumberjack.lumberjack - INFO - Cutting 5 of height 30
+08/27/2024 14:22:33 - lumberjack - DEBUG - Importing package
+08/27/2024 14:22:33 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:22:33 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:22:33 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:22:33 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:22:33 - lumberjack.lumberjack - INFO - Cutting 5 of height 30
+08/27/2024 14:22:33 - lumberjack.lumberjack - INFO - Cut 4 trees
+08/27/2024 14:23:09 - lumberjack - DEBUG - Importing package
+08/27/2024 14:23:09 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:23:09 - lumberjack.forest - INFO - Initialized forest with 80 trees
+08/27/2024 14:23:09 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:23:09 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:23:09 - lumberjack.lumberjack - INFO - Cutting 5 of height 30
+08/27/2024 14:23:09 - lumberjack.lumberjack - INFO - Cut 4 trees
+08/27/2024 14:23:55 - lumberjack - DEBUG - Importing package
+08/27/2024 14:23:55 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:23:55 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Cutting 2 of height 20
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Cut 2 trees
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Cutting 2 of height 40
+08/27/2024 14:23:55 - lumberjack.lumberjack - INFO - Cut 0 trees
+08/27/2024 14:24:21 - lumberjack - DEBUG - Importing package
+08/27/2024 14:24:21 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:24:21 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Cutting 2 of height 20
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Cut 2 trees
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Cutting 2 of height 40
+08/27/2024 14:24:21 - lumberjack.lumberjack - INFO - Cut 0 trees
+08/27/2024 14:43:47 - lumberjack - DEBUG - Importing package
+08/27/2024 14:43:47 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:43:47 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Cutting 2 of height 20
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Cut 2 trees
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Cutting 2 of height 40
+08/27/2024 14:43:47 - lumberjack.lumberjack - INFO - Cut 0 trees
+08/27/2024 14:44:10 - lumberjack - DEBUG - Importing package
+08/27/2024 14:44:10 - lumberjack.tree - WARNING - Unknown tree species: Horse Chestnut
+08/27/2024 14:44:10 - lumberjack.forest - INFO - Initialized forest with 4 trees
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Initialized
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Cutting 2 of height 20
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Cut 2 trees
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Cutting 2 of height 40
+08/27/2024 14:44:10 - lumberjack.lumberjack - INFO - Cut 0 trees
