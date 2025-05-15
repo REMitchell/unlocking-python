@@ -194,5 +194,3 @@ def determineWinner(hand1, hand2):
             return 'HAND 2 WINS!'
 
 determineWinner(hand1, hand2)
-
-
